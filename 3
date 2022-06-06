@@ -1,0 +1,13 @@
+class Composing {
+    
+    public static String compose(String s1, String s2) {
+      String[] str1 = s1.split("\n");
+        String[] str2 = s2.split("\n");
+        int n = str1.length;
+        String res = "";
+        for (int i = 0; i < n; i++) {
+            res += str1[i].substring(0,i + 1) + str2[n - 1 - i].substring(0,n - i)+"\n";
+        }
+        return res.substring(0, res.length()-1);
+    }
+}

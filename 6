@@ -1,0 +1,14 @@
+import java.util.ArrayList;
+public class Kata
+{
+  public static int dontGiveMeFive(int start, int end)
+  {
+    ArrayList<Integer> result = new ArrayList<>();
+        for(int i = start; i <= end; i++){
+            if(!Integer.toString(i).contains("5")){
+                result.add(i);
+            }
+        }
+        return result.size();
+  }
+}

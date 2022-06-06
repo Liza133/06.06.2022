@@ -1,0 +1,17 @@
+public class Solution{
+    public static String whatCentury(int year) {
+    int century = (((year - 1) / 100) + 1);
+        if (century / 10 != 1) {
+            switch (century % 10) {
+                case 1:
+                    return century + "st";
+                case 2:
+                    return century + "nd";
+                case 3:
+                    return century + "rd";
+                default:
+                    return century + "th";
+            }
+        } else return century + "th";
+    }
+}
